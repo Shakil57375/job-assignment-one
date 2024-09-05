@@ -2,7 +2,7 @@ import Gallery from "./Components/Gallery";
 import Tabs from "./components/Tabs";
 const App = () => {
   return (
-    <div className="flex items-start justify-between bg-gray-100">
+    <div className="flex  justify-between ">
       <div></div>
       <div className="relative top-6 right-4 flex flex-col gap-6 ">
         <div className="bg-[#363C43] rounded-[19px] p-6 shadow-lg w-[720px] md:w-[770px] ">
