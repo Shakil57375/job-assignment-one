@@ -32,52 +32,57 @@ const Gallery = () => {
 
   return (
     <div className="max-w-4xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg relative">
-      <h1 className="text-white text-2xl mb-4">Gallery</h1>
+    <h1 className="text-white text-2xl mb-4">Gallery</h1>
 
-      {/* Carousel */}
-      <div className="relative">
-        <div className="flex justify-center">
-          {/* Display Current Image */}
-          <img
-            src={images[currentIndex]}
-            alt={`Slide ${currentIndex}`}
-            className="rounded-lg object-cover w-96 h-48"
-          />
-        </div>
+    {/* Carousel */}
+    <div className="relative">
+      <div className="flex justify-between items-center overflow-hidden">
+        {/* Display 3 images */}
+        {images.slice(currentIndex, currentIndex + 3).map((img, idx) => (
+          <div key={idx} className="flex-shrink-0 w-1/3 px-2">
+            <img
+              src={img}
+              alt={`Slide ${idx}`}
+              className="rounded-lg object-cover w-full h-40"
+            />
+          </div>
+        ))}
+      </div>
 
-        {/* Left Arrow */}
+      {/* Arrows positioned at the top-right */}
+      <div className="absolute top-0 right-0 flex space-x-2 p-4">
         <button
           onClick={handlePrev}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-gray-700 p-2 rounded-full cursor-pointer"
+          className="text-white bg-gray-700 p-2 rounded-full cursor-pointer"
         >
           <FaArrowLeft />
         </button>
 
-        {/* Right Arrow */}
         <button
           onClick={handleNext}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white bg-gray-700 p-2 rounded-full cursor-pointer"
+          className="text-white bg-gray-700 p-2 rounded-full cursor-pointer"
         >
           <FaArrowRight />
         </button>
       </div>
-
-      {/* Add Image Button */}
-      <div className="flex items-center space-x-4 mt-4">
-        <label
-          htmlFor="imageUpload"
-          className="bg-gray-700 text-white px-4 py-2 rounded-lg cursor-pointer"
-        >
-          + ADD IMAGE
-        </label>
-        <input
-          type="file"
-          id="imageUpload"
-          className="hidden"
-          onChange={handleAddImage}
-        />
-      </div>
     </div>
+
+    {/* Add Image Button */}
+    <div className="flex items-center space-x-4 mt-4">
+      <label
+        htmlFor="imageUpload"
+        className="bg-gray-700 text-white px-4 py-2 rounded-lg cursor-pointer"
+      >
+        + ADD IMAGE
+      </label>
+      <input
+        type="file"
+        id="imageUpload"
+        className="hidden"
+        onChange={handleAddImage}
+      />
+    </div>
+  </div>
   );
 };
 
