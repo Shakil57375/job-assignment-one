@@ -68,14 +68,14 @@ const Gallery = () => {
               onClick={handlePrev}
               className="text-white bg-gray-700 h-[45px] w-[45px] rounded-full cursor-pointer bg-gradient-to-r from-[#303439] to-[#161718] shadow-[4px_5px_30px_5px_#101213,-5px_-3px_30px_-10px_#96BEE7]"
             >
-              <FaArrowLeft className="mx-auto" />
+              <FaArrowLeft className="mx-auto text-[#6F787C]" />
             </button>
 
             <button
               onClick={handleNext}
               className="text-white h-[45px] w-[45px] bg-gray-700 p-2 rounded-full cursor-pointer bg-gradient-to-l from-[#303439] to-[#161718] shadow-[4px_5px_30px_5px_#101213,-5px_-3px_30px_-10px_#96BEE7]"
             >
-              <FaArrowRight className="mx-auto" />
+              <FaArrowRight className="mx-auto text-[#6F787C]" />
             </button>
             </div>
           </div>
