@@ -1,5 +1,5 @@
 import Gallery from "./Components/Gallery";
-import Tabs from "./components/Tabs";
+import Tabs from "./Components/Tabs"
 const App = () => {
   return (
     <div className="flex  justify-between ">
