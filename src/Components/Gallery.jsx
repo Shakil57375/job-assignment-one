@@ -50,7 +50,7 @@ const Gallery = () => {
         <div className="flex items-center justify-between gap-6">
           <label
             htmlFor="imageUpload"
-            className="bg-gray-700 text-white px-4 py-2 rounded-lg cursor-pointer"
+            className="bg-gray-600 text-white px-5 py-3 rounded-[25px] cursor-pointer shadow-[-5px_-6px_5px_#9494944D,4px_10px_15px_#000000b5]"
           >
             + ADD IMAGE
           </label>
@@ -66,16 +66,16 @@ const Gallery = () => {
                 {/* Arrows positioned at the top-right */}
             <button
               onClick={handlePrev}
-              className="text-white bg-gray-700 p-2 rounded-full cursor-pointer"
+              className="text-white bg-gray-700 h-[45px] w-[45px] rounded-full cursor-pointer bg-gradient-to-r from-[#303439] to-[#161718] shadow-[4px_5px_30px_5px_#101213,-5px_-3px_30px_-10px_#96BEE7]"
             >
-              <FaArrowLeft />
+              <FaArrowLeft className="mx-auto" />
             </button>
 
             <button
               onClick={handleNext}
-              className="text-white bg-gray-700 p-2 rounded-full cursor-pointer"
+              className="text-white h-[45px] w-[45px] bg-gray-700 p-2 rounded-full cursor-pointer bg-gradient-to-l from-[#303439] to-[#161718] shadow-[4px_5px_30px_5px_#101213,-5px_-3px_30px_-10px_#96BEE7]"
             >
-              <FaArrowRight />
+              <FaArrowRight className="mx-auto" />
             </button>
             </div>
           </div>
