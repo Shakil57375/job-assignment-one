@@ -40,7 +40,7 @@ const Gallery = () => {
   const visibleImages = images.slice(currentIndex, currentIndex + 3);
 
   return (
-    <div className="w-[720px] md:w-[770px] mx-auto bg-gray-800 p-6 rounded-[19px] shadow-lg relative h-[320px]">
+    <div className="w-[720px] md:w-[770px] mx-auto bg-[#363C43] p-6 rounded-[19px] shadow-lg relative h-[320px]">
       <div className="flex items-center justify-between">
         <label className="bg-[#171717] text-white py-3 px-6 rounded-[20px] cursor-pointer text-4xl font-medium font-poppins">
           Gallery
@@ -50,7 +50,7 @@ const Gallery = () => {
         <div className="flex items-center justify-between gap-6">
           <label
             htmlFor="imageUpload"
-            className="bg-gray-600 text-white px-5 py-3 rounded-[25px] cursor-pointer shadow-[-5px_-6px_5px_#9494944D,4px_10px_15px_#000000b5]"
+            className="bg-gray-600 text-white px-5 py-3 rounded-[25px] cursor-pointer shadow-[-3px_-3px_9px_#ffffff70,8px_10px_15px_#000000b5]"
           >
             + ADD IMAGE
           </label>
